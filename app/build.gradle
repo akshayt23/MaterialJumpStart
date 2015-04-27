@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.rubberduck.parsestarter"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:21.0.2'
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:cardview-v7:21.0.+'
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile 'com.android.support:palette-v7:21.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile files('libs/Parse/Parse-1.9.1.jar')
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile fileTree(dir: 'libs', include: 'Parse-*.jar')
+    compile 'com.github.traex.rippleeffect:library:1.2.4'
+    compile 'de.hdodenhof:circleimageview:1.2.2'
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+    compile 'br.com.liveo:navigationdrawer-material:1.0.4'
+    compile 'com.github.ksoichiro:android-observablescrollview:1.5.0'
+    compile 'com.mikepenz.iconics:library:0.9.1@aar'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile('com.mikepenz.materialdrawer:library:2.7.9@aar') {
+        transitive = true
+    }
+
+}

@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="?attr/colorPrimary" />
+
+    <View
+        android:id="@+id/list_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_grey_200" />
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView
+        android:id="@+id/rv_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEdgeEffectTheme"
+        android:scrollbars="vertical" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="@dimen/toolbar_elevation"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/toolbar_elevation"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/margin_standard"
+        android:paddingLeft="@dimen/margin_standard"
+        android:paddingStart="@dimen/margin_standard">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/toolbar_elevation"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:minHeight="?attr/actionBarSize"
+            android:paddingRight="12dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flexible_space_image_height"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+</FrameLayout>
+
